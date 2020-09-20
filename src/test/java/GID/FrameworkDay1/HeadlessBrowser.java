@@ -33,7 +33,7 @@ public class HeadlessBrowser {
 		chromeOptions.addArguments("--headless");
 		chromeOptions.setAcceptInsecureCerts(true);
 		WebDriver driver = new ChromeDriver(chromeOptions);
-		driver.get("https://www.google.lk");
+		driver.get("https://stackoverflow.com/");
 		System.out.println("Excuting hedless browser abc123");
 		System.out.println("Test Git");
 		String title = driver.getTitle();
