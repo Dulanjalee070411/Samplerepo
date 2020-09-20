@@ -24,19 +24,20 @@ public class HeadlessBrowser {
 		 * capabilities.acceptInsecureCerts();
 		 */
 
-		/*
-		 * DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		 * capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, false);
-		 */
+		
+		 DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		 capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, false);
+		 
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
 		chromeOptions.setAcceptInsecureCerts(true);
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		driver.get("https://www.google.lk");
-		System.out.println("Excuting hedless browser ");
+		System.out.println("Excuting hedless browser abc123");
 		System.out.println("Test Git");
 		String title = driver.getTitle();
+		
 		System.out.println(title);
 
 	}
