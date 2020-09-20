@@ -1,6 +1,5 @@
 package GID.FrameworkDay1;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,9 +11,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class HeadlessBrowser {
 
 	public static void main(String[] args) {
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\dulanjaleema\\eclipse-workspace\\FrameworkDay1\\driver\\chromedriver.exe");
-		
-		//WebDriverManager.chromedriver().setup();
+		// System.setProperty("webdriver.chrome.driver",
+		// "C:\\Users\\dulanjaleema\\eclipse-workspace\\FrameworkDay1\\driver\\chromedriver.exe");
+
+		// WebDriverManager.chromedriver().setup();
 		/*
 		 * ChromeOptions chromeOptions = new ChromeOptions();
 		 * chromeOptions.setHeadless(true);
@@ -23,22 +23,21 @@ public class HeadlessBrowser {
 		 * capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		 * capabilities.acceptInsecureCerts();
 		 */
-		
+
 		/*
 		 * DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		 * capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, false);
 		 */
 		WebDriverManager.chromedriver().setup();
-		ChromeOptions chromeOptions =  new ChromeOptions();
+		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
-		//chromeOptions.setAcceptInsecureCerts(true);
+		chromeOptions.setAcceptInsecureCerts(true);
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		driver.get("https://www.google.lk");
 		System.out.println("Excuting hedless browser ");
+		System.out.println("Test Git");
 		String title = driver.getTitle();
 		System.out.println(title);
-		
-		
 
 	}
 
